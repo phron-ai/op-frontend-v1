@@ -54,8 +54,6 @@ OpenPhron Marketplace provides a platform for users to explore various AI oracle
 
    -**REACT_APP_PROMPT_SIX**: prompts.
 
-   -**REACT_APP_PROMPT_RULES**: prompt rules.
-
 4. Run the application:
 
    Start the Client
