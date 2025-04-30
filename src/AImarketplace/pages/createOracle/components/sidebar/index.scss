@@ -1,0 +1,70 @@
+.oracle-sidebar {
+  width: 289px;
+  text-align: center;
+  padding-top: 20px;
+  padding: 10px;
+  background-color: rgba(233, 233, 233, 0.4941176471);
+
+  .sidebar-list {
+    height: 81vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: grey rgba(255, 0, 0, 0);
+
+    .item {
+      color: #4b4b4b;
+      border: none;
+      margin: 10px;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 8px;
+      background-color: white;
+      align-items: center;
+      justify-content: center;
+      // font-family: Inter, sans-serif;
+
+      // font-family: Inter, sans-serif;
+      transition: background 0.3s ease;
+
+      &[data-selected=true] {
+        background-color: #00695c;
+        color: #f0f0f0;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px, rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
+        border: none;
+      }
+    }
+  }
+
+  .color-button {
+    border: none;
+    margin: 12px;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    padding: 13px;
+    background-color: #37474f;
+    cursor: pointer;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    // font-family: Inter, sans-serif;
+    background-color: #636AE8FF;
+    // font-family: Inter, sans-serif;
+    transition: background 0.6s ease;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px, rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
+    color: #ffffff;
+
+    &:hover {
+      border: none;
+      color: white;
+      background-color: #607d8b;
+      transition: background 0.6s ease;
+    }
+  }
+
+  .item:hover {
+    background: #e2e2e2;
+    color: white;
+    border: none;
+  }
+
+}

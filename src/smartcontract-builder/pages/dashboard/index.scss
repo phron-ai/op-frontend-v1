@@ -1,0 +1,126 @@
+/* For small screens (phones) */
+@media (max-width: 600px) {
+
+    .workflow-container,
+    .ai-library-container {
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .workflow-steps {
+        flex-direction: column;
+    }
+
+    .step-circle {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .step-title {
+        font-size: 0.7rem;
+        margin-top: 0.3rem;
+    }
+
+    .workflow-input {
+        min-width: 100%;
+        max-width: 100%;
+        font-size: 16px;
+        padding: 1rem;
+    }
+
+    .create-button {
+        width: 140px;
+        font-size: 18px;
+    }
+
+    .ai-card-grid {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    .subscribeButton{
+        float: right;
+        font-size: 20px;
+        padding: 7px;
+        
+    }
+}
+
+/* For medium screens (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    .workflow-container,
+    .ai-library-container {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    .workflow-steps {
+        justify-content: space-around;
+    }
+
+    .step-circle {
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+
+    .step-title {
+        font-size: 0.75rem;
+    }
+
+    .workflow-input {
+        min-width: 98%;
+        max-width: 98%;
+        font-size: 18px;
+        padding: 1.25rem;
+    }
+
+    .create-button {
+        width: 150px;
+        font-size: 20px;
+    }
+
+    .ai-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+    }
+}
+
+/* For large screens (desktops) */
+@media (min-width: 1025px) {
+
+    .workflow-container,
+    .ai-library-container {
+        width: 87%;
+        padding: 2rem;
+    }
+
+    .workflow-steps {
+        justify-content: space-between;
+    }
+
+    .step-circle {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .step-title {
+        font-size: 0.8rem;
+    }
+
+    .workflow-input {
+        min-width: 96%;
+        max-width: 96%;
+        font-size: 20px;
+        padding: 1.75rem;
+    }
+
+    .create-button {
+        width: 165px;
+        font-size: 24px;
+    }
+
+    .ai-card-grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1rem;
+    }
+}

@@ -1,0 +1,16 @@
+.contribute-page {
+  margin: auto;
+  display: flex;
+  height: 91vh;
+  overflow: hidden;
+
+  .content {
+    width: 100%;
+    height: 80vh;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: grey rgba(255, 0, 0, 0);
+    text-align: center;
+    padding-top: 100px;
+  }
+}

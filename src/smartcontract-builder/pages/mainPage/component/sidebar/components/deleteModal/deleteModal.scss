@@ -1,0 +1,62 @@
+.delete-modal-dialog {
+    & .MuiDialog-paper {
+        width: 480px;
+        max-width: 90%;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        background-color: #ffffff;
+        padding: 20px;
+    }
+}
+
+.delete-modal-title {
+    text-align: center;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 16px;
+}
+
+.delete-modal-description {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #34495e;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.delete-modal-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding-bottom: 16px;
+}
+
+.delete-button {
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: #ffffff;
+    border-radius: 8px;
+    box-shadow: none;
+    text-transform: none;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #c0392b;
+    }
+}
+
+.cancel-button {
+    padding: 10px 20px;
+    border: 1px solid #bdc3c7;
+    color: #7f8c8d;
+    border-radius: 8px;
+    background-color: transparent;
+    text-transform: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+        border-color: #95a5a6;
+        background-color: #ecf0f1;
+        color: #2c3e50;
+    }
+} 

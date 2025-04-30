@@ -1,0 +1,111 @@
+.workflow-container {
+    width: 87%;
+    margin: 2rem auto;
+    padding: 32px;
+    background: #F8F9FAFF;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: #9095A0FF;
+    border-style: solid;
+    box-shadow: 0px 4px 9px #171a1f1C, 0px 0px 2px #171a1f1F;
+    height: 255px;
+
+    .workflow-input {
+        min-width: 96%;
+        max-width: 96%;
+        height: 50%;
+        padding: 28px;
+        border: 1px solid #e5e7eb;
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+        background-color: #FFFFFFFF;
+        margin-top: 30px;
+        font-size: 20px;
+    }
+
+    .text-center {
+        display: flex;
+        justify-content: center;
+
+        .create-button {
+            width: 165px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            // font-family: Inter;
+            font-size: 24px;
+            color: #FFFFFFFF;
+            background: #636AE8FF;
+            border: none;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px, rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
+
+            &:hover {
+                color: #FFFFFFFF;
+                background: #4850E4FF;
+                cursor: pointer;
+            }
+        }
+
+    }
+}
+
+.sub-icon {
+    float: right;
+    margin: 10px;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.subscribe-btn-wave {
+    position: relative;
+    padding: 15px 50px;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    background: linear-gradient(90deg, #390179, #7f05f1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(79, 252, 254, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .subscribe-btn-wave:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(79, 252, 254, 0.5);
+  }
+
+  .subscribe-btn-wave::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: skewX(-45deg);
+    transition: 0.3s ease;
+    animation: shimmer 3s infinite;
+  }
+
+  .subscribe-btn-wave:hover::before {
+    animation-duration: 1.5s;
+  }
+
+  @keyframes shimmer {
+    0% {
+      left: -100%;
+    }
+    50% {
+      left: 0;
+    }
+    100% {
+      left: 100%;
+    }
+}

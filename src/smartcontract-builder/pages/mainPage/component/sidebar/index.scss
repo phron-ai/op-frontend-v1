@@ -1,0 +1,55 @@
+.sidebar {
+    width: 200px;
+    background-color: #ececec;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 10px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: grey rgba(255, 0, 0, 0);
+    height: 87vh;
+
+
+    .sidebar-btn {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #FFF;
+
+        span {
+            float: right;
+        }
+
+        span:hover {
+            color: red;
+        }
+
+        .tooltip {
+            display: none;
+        }
+
+        &:hover {
+            background-color: #DDD;
+            cursor: pointer;
+
+            .tooltip {
+                display: block;
+            }
+        }
+
+        &[data-selected=true] {
+            background-color: hsl(211, 100%, 50%);
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px, rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
+            color: #fff;
+
+            &:hover {
+                background-color: #2b76d8a9;
+                cursor: pointer;
+            }
+        }
+
+    }
+
+
+}

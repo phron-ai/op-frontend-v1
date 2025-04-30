@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+General Reset * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #333;
+  margin: 0;
+  font-family: "Plus Jakarta Sans", serif !important;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  /* background-image: url("./assets/background.png"); */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  /* @apply !bg-gray-100; */
+  background: #ffffff !important;
+  /* background-color: rgba(255, 255, 255, 0.5) !important; */
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; 
+}
+.typewriter-text {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* .typewriter-text::after {
+  content: "|";
+  animation: blink 0.7s infinite;
+} */
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.hero {
+  position: absolute;
+  transform: translateY(8%) translateX(-3%);
+  width: 100%;
+  filter: grayscale(0);
+  /* z-index: 0; */
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+@media (min-width: 375px) {
+  .hero {
+    height: 200px;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    height: 430px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero {
+    height: 200px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .hero {
+    height: 200px;
+  }
+}
+.borderbottomheader{
+  border-bottom: 1px solid rgb(67 32 141 / 14%);
+
+}
+.borderrightsidebar{
+  border-right: 1px solid rgb(67 32 141 / 14%) !important;
+}
+.shadowbottomsteps{
+  box-shadow: 0px 3px 8px -9px #000000;
+}

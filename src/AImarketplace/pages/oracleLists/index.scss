@@ -1,0 +1,21 @@
+.main {
+    margin: 0;
+    height: 90vh;
+
+    .item-list {
+
+        scrollbar-width: thin;
+        scrollbar-color: grey rgba(255, 0, 0, 0);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 10px;
+        overflow-y: scroll;
+        scrollbar-color: grey rgba(255, 0, 0, 0);
+        height: 90vh;
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: blue;
+        }
+    }
+}

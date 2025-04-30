@@ -1,0 +1,28 @@
+.contribute {
+    max-width: 500px;
+    margin: auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0px 0px 5px 0px #3d3d3d;
+
+    .title {
+        color: #37474f;
+        font-family: "Segoe UI Syml";
+        font-style: italic;
+        font-size: 39px;
+    }
+
+    textarea {
+        width: 100%;
+        height: 150px;
+        padding: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 7px;
+        font-size: 1rem;
+        background-color: #F8F9FAFF;
+        resize: none;
+        outline: none;
+    }
+}

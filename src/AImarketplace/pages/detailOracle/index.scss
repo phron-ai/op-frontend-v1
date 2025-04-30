@@ -1,0 +1,170 @@
+.detail-oracle-page {
+    width: 100%;
+    height: 88vh;
+    color: #666;
+    padding-top: 2rem;
+
+    .loading {
+        margin: 20vh 0;
+        text-align: center;
+
+        .no-data {
+            color: #555;
+            text-align: center;
+            margin: auto;
+            font-size: 3em;
+        }
+
+        .loader {
+            border: 5px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 5px solid #3498db;
+            width: 50px;
+            height: 50px;
+            -webkit-animation: spin 2s linear infinite;
+            /* Safari */
+            animation: spin 2s linear infinite;
+            margin: auto;
+
+            @-webkit-keyframes spin {
+                0% {
+                    -webkit-transform: rotate(0deg);
+                }
+
+                100% {
+                    -webkit-transform: rotate(360deg);
+                }
+            }
+
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+    }
+
+
+}
+
+.oracle-data-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    padding: 0;
+}
+
+.questions-container {
+    // width: 90%;
+    // height: 48vh;
+    // margin: auto;
+    // padding: 0;
+    // margin-top: 3rem;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: grey rgba(255, 0, 0, 0);
+}
+
+.oracle-data-container-left {
+    width: 30%;
+    height: 300px;
+}
+
+.oracle-data-container-left img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.oracle-data-container-right {
+    width: 70%;
+    height: 300px;
+    padding-left: 3rem;
+    display: flex;
+    padding-top: 10px;
+}
+
+.name-title {
+    text-transform: capitalize;
+}
+
+.oracle-data-container-right .left-content {
+    width: 80%;
+}
+
+.oracle-data-container-right .right-content {
+    width: 20%;
+    text-align: center;
+}
+
+
+.oracle-data-container-right-top .items {
+    font-size: 26px;
+    font-weight: bold;
+    width: 50%;
+    font-family: ui-sans-serif;
+}
+
+.oracle-data-container-right-main .title {
+    font-size: 25px;
+    font-weight: 700;
+    font-family: ui-sans-serif;
+}
+
+.description-title {
+    font-size: 26px;
+    font-family: ui-sans-serif;
+    margin: 0px;
+    text-transform: capitalize;
+}
+
+.oracle-data-container-right-main {
+    margin-top: 10px;
+    height: 240px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: grey rgba(255, 0, 0, 0);
+}
+
+.questions-container-item {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+}
+
+.questionanswer {
+    border-bottom: 1px solid #555;
+}
+
+.subscribe-button {
+    margin-top: 25px;
+    width: 160px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    // font-family: Inter, sans-serif;
+    font-size: 16px;
+    background-color: rgb(96, 103, 238);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px, rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
+    transition: background 0.3s ease;
+}
+
+.subscribe-button:hover {
+    background: #4850E4FF;
+    /* primary-550 */
+}
+
+.price {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}

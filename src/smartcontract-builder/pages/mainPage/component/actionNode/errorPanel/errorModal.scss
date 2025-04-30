@@ -1,0 +1,230 @@
+.error-modal {
+  .MuiDialog-paper {
+    // max-width: 60vw !important;
+    width: 100%;
+    // margin: 16px;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35) !important;
+    @media (min-width: 375px) {
+      max-width: 300px !important/* 32px */;
+      margin: 5px;
+    }
+    @media (min-width: 768px) {
+      max-width: 600px !important/* 32px */;
+      margin: 0px;
+    }
+    @media (min-width: 1440px) {
+      max-width: 600px !important/* 32px */;
+      margin: 16px;
+    }
+    // Different widths for compile and test modals
+    &.compile-modal {
+      width: 900px !important;
+      background: #1a1a1a !important;
+      //   @media (min-width: 375px) {
+      //     width: 350px !important/* 32px */;
+      //   }
+      //   @media (min-width: 768px) {
+      //     width: 600px !important/* 32px */;
+      //   }
+      //   @media (min-width: 1440px) {
+      //     max-width: 60vw !important;
+      //   }
+    }
+
+    &.test-modal {
+      width: 1200px !important;
+      background: #1e1e1e !important;
+    }
+  }
+
+  .error-content {
+    padding: 0 !important;
+    overflow: auto;
+    // Different header styles for compile and test
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 24px;
+      border-bottom: 1px solid #333;
+
+      &.compile-header {
+        background: #2d2d2d;
+
+        .status-icon {
+          color: #ff6b6b;
+        }
+      }
+
+      &.test-header {
+        background: #252525;
+
+        .status-icon {
+          &.error {
+            color: #ff5555;
+          }
+
+          &.success {
+            color: #50fa7b;
+          }
+        }
+      }
+
+      .header-content {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        h2 {
+          margin: 0;
+          color: #fff;
+          font-size: 18px;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .loading-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 300px;
+      padding: 32px;
+      //   max-width: 500px;
+      background: linear-gradient(135deg, #1e1e1e, #2d2d2d);
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+
+      .loading-text {
+        font-size: 28px;
+        font-weight: 600;
+        color: #ffffff;
+        margin-bottom: 24px;
+        text-shadow: 0 0 8px rgba(52, 83, 221, 0.8);
+      }
+
+      .loading-progress {
+        width: 320px;
+        height: 6px;
+        background: #444;
+        border-radius: 3px;
+        overflow: hidden;
+        margin-bottom: 16px;
+        position: relative;
+
+        .loading-bar {
+          width: 30%;
+          height: 100%;
+          background: linear-gradient(90deg, #3453dd, #50fa7b);
+          border-radius: 3px;
+          animation: loading 1.5s infinite ease-in-out;
+        }
+      }
+
+      .loading-message {
+        color: #bbbbbb;
+        font-size: 16px;
+        font-weight: 500;
+      }
+    }
+
+    // Different content styles
+  }
+}
+
+@keyframes loading {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  50% {
+    transform: translateX(200%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+// Add dark mode support
+@media (prefers-color-scheme: dark) {
+  .error-modal {
+    .MuiDialog-paper {
+      background-color: #1e1e1e !important;
+    }
+
+    .error-content {
+      .MuiDialogTitle-root {
+        color: #f8f8f8;
+        border-bottom-color: #333;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: #2d2d2d;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: #666;
+
+        &:hover {
+          background: #888;
+        }
+      }
+    }
+  }
+}
+
+.close-icon-button {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  color: #666;
+
+  &:hover {
+    color: #ff5555;
+    transform: rotate(90deg);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #3453dd;
+    outline-offset: 2px;
+  }
+
+  .close-icon {
+    stroke-width: 1.5px;
+  }
+}
+
+.stop-typing-button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  margin-right: 8px;
+  background: #ef4444;
+  color: white;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: #dc2626;
+  }
+
+  svg {
+    animation: pulse 2s infinite;
+  }
+}

@@ -1,0 +1,45 @@
+ .code-modal {
+     padding: 10px;
+
+     .MuiDialog-paper {
+         max-height: 70%;
+         width: 80%;
+         max-width: 950px;
+     }
+
+     .modal-content {
+         height: 90%;
+
+         .title {
+             text-align: center;
+
+             .dark-mode-switch {
+                 float: right;
+             }
+         }
+
+         h3 {
+             height: 500px;
+             overflow-y: scroll;
+             background-color: #ccc;
+             padding: 20px;
+             border-radius: 10px;
+             font-size: 0.8em;
+             font-family: 'Courier New', Courier, monospace;
+             margin: 20px auto;
+             white-space: pre-wrap;
+         }
+
+         .copy-icon {
+             float: right;
+             cursor: pointer;
+         }
+
+         .code {
+             height: 500px;
+             margin-top: 10px;
+             overflow-y: scroll;
+
+         }
+     }
+ }

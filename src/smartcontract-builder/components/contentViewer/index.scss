@@ -1,0 +1,25 @@
+.buttonStyle {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    float: right;
+}
+
+.copy-button-container {
+    width: 100%;
+    font-size: 11px;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+}
+
+.ContentCopyIcon {
+    width: 15px !important;
+    height: 23px !important;
+}

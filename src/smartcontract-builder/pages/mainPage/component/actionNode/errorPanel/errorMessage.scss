@@ -1,0 +1,221 @@
+.error-message {
+    max-height: 80%;
+    align-items: flex-start;
+    padding: 16px;
+    border-radius: 12px;
+    margin: 20px 0;
+    transition: all 0.3s ease;
+    background: #1e1e1e;
+    border: 1px solid transparent;
+
+    .modify {
+        font-size: 12px;
+        font-weight: 500;
+        margin: 5px;
+        cursor: pointer;
+    }
+
+    &.error {
+        margin: 0;
+        background: rgba(255, 85, 85, 0.05);
+        border-color: rgba(255, 85, 85, 0.2);
+
+        &:hover {
+            background: rgba(255, 85, 85, 0.08);
+        }
+    }
+
+    &.success {
+        background: rgba(80, 250, 123, 0.05);
+        border-color: rgba(80, 250, 123, 0.2);
+
+        &:hover {
+            background: rgba(80, 250, 123, 0.08);
+        }
+    }
+
+    .message-content {
+        display: flex;
+        gap: 16px;
+        width: 100%;
+        word-break: break-all;
+
+        .status-icon {
+            padding-top: 2px;
+
+            svg {
+                width: 20px;
+                height: 20px;
+
+                &.error {
+                    color: #ff5555;
+                }
+
+                &.success {
+                    color: #50fa7b;
+                }
+            }
+        }
+
+        .message-text {
+            flex: 1;
+            width: 80%;
+            height: 90%;
+
+            h4 {
+                margin: 0;
+                font-size: 15px;
+                font-weight: 600;
+                color: #272727;
+                letter-spacing: 0.3px;
+            }
+
+            .details-toggle {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-top: 4px;
+                padding: 4px 0;
+                cursor: pointer;
+
+                &:hover {
+                    p {
+                        color: #9333EA;
+                    }
+
+                    .toggle-icon {
+                        color: #9333EA;
+                    }
+                }
+
+                p {
+                    margin: 0;
+                    font-size: 13px;
+                    color: #8292bd;
+                    transition: all 0.2s ease;
+                }
+
+                .toggle-icon {
+                    display: flex;
+                    align-items: center;
+                    color: #8292bd;
+                    transition: all 0.2s ease;
+                }
+            }
+
+            .error-details {
+                width: 95%;
+                max-width: 100%;
+                max-height: 500px;
+                margin: 10px;
+                padding: 16px;
+                background: #272727;
+                border-radius: 8px;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                font-family: 'JetBrains Mono', 'Consolas', monospace;
+                font-size: 13px;
+                line-height: 1.6;
+                white-space: pre-wrap;
+                overflow-x: auto;
+                color: #f8f8f2;
+                overflow-y: auto;
+                cursor: pointer;
+                animation: typing 0.3s steps(60, end) forwards;
+
+                @keyframes typing {
+                    from {
+                        height: 0;
+                    }
+                    to {
+                        height: 100%;
+                    }
+                }
+
+                &::-webkit-scrollbar {
+                    width: 8px;
+                    height: 8px;
+                }
+
+                &::-webkit-scrollbar-track {
+                    background: rgba(0, 0, 0, 0.2);
+                    border-radius: 4px;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background: rgba(255, 255, 255, 0.1);
+                    border-radius: 4px;
+
+                    &:hover {
+                        background: rgba(255, 255, 255, 0.15);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Light mode support
+@media (prefers-color-scheme: light) {
+    .error-message {
+        background: #ffffff;
+
+        &.error {
+            background: rgba(255, 85, 85, 0.03);
+            border-color: rgba(255, 85, 85, 0.15);
+
+            &:hover {
+                background: rgba(255, 85, 85, 0.05);
+            }
+        }
+
+        &.success {
+            background: rgba(80, 250, 123, 0.03);
+            border-color: rgba(80, 250, 123, 0.15);
+
+            &:hover {
+                background: rgba(80, 250, 123, 0.05);
+            }
+        }
+
+        .message-text {
+            h4 {
+                color: #333232;
+            }
+
+            p {
+                color: #3a3939;
+            }
+
+            .error-details {
+                background: #f8f9fa;
+                border-color: #e9ecef;
+                color: #1a1a1a;
+            }
+        }
+    }
+}
+
+// Dark mode support
+@media (prefers-color-scheme: dark) {
+    .error-message {
+        &.error {
+            background: rgba(255, 86, 86, 0.1);
+            border-color: rgba(255, 86, 86, 0.3);
+        }
+
+        &.success {
+            background: rgba(80, 250, 123, 0.1);
+            border-color: rgba(80, 250, 123, 0.3);
+        }
+
+        .message-text {
+            h4 {
+                color: #f8f8f2;
+            }
+
+            p {
+                color: #6272a4;
+            }
+        }
+    }
+}

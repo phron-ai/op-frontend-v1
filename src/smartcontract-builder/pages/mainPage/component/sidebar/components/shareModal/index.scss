@@ -1,0 +1,133 @@
+.share-button {
+    background-color: hsl(var(--primary));
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+        opacity: 85%;
+    }
+
+    &.copied {
+        background-color: #48bb78;
+    }
+}
+
+.cancel-button {
+    padding: 10px 20px;
+    border: 1px solid #bdc3c7;
+    color: #7f8c8d;
+    border-radius: 8px;
+    background-color: transparent;
+    text-transform: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+        border-color: #95a5a6;
+        background-color: #ecf0f1;
+        color: #2c3e50;
+    }
+}
+
+.share-modal-input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #4a5568;
+    background-color: #f8f9fa;
+
+    &:focus {
+        outline: none;
+        border-color: hsl(var(--primary));
+        box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+    }
+}
+
+.share-modal-dialog {
+    & .MuiDialog-paper {
+        width: 480px;
+        max-width: 90%;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        background-color: #ffffff;
+        padding: 20px;
+    }
+}
+
+.share-modal-title {
+    text-align: center;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 16px;
+}
+
+.share-modal-description {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #34495e;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.share-modal-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding-bottom: 16px;
+}
+
+.share-modal-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-family: sans-serif;
+
+    input[type='checkbox'] {
+        display: none; // Hide the default checkbox style
+    }
+
+    .checkbox-custom {
+        width: 20px;
+        height: 20px;
+        border: 2px solid #555;
+        border-radius: 4px;
+        margin-right: 8px;
+        position: relative;
+        transition: all 0.3s ease;
+        background-color: #fff;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 7px;
+            width: 4px;
+            height: 9px;
+            border: solid #fff;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+    }
+
+    input[type='checkbox']:checked+.checkbox-custom {
+        background-color: #007bff;
+        border-color: #007bff;
+
+        &::after {
+            opacity: 1;
+        }
+    }
+
+    .checkbox-label {
+        font-size: 16px;
+        color: #333;
+    }
+}

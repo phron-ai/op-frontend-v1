@@ -1,0 +1,160 @@
+.ansi-error-display {
+    height: auto;
+    max-height: 80vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+
+    &.compile-content {
+        background: #1a1a1a;
+
+        .output-content {
+            font-family: 'Fira Code', monospace;
+            color: #e4e4e4;
+        }
+    }
+
+    &.test-content {
+        background: #1e1e1e;
+
+        .output-content {
+            font-family: 'JetBrains Mono', monospace;
+            color: #f8f8f2;
+        }
+    }
+
+    .output-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 16px;
+        background: #252525;
+        border-bottom: 1px solid #333;
+
+        .status-badges {
+            display: flex;
+            gap: 8px;
+
+            .badge {
+                padding: 4px 8px;
+                border-radius: 4px;
+                font-size: 12px;
+                font-weight: 500;
+
+                &.pended {
+                    background: rgba(255, 85, 85, 0.1);
+                    color: #ff5555;
+                }
+
+                &.error {
+                    background: rgba(255, 85, 85, 0.1);
+                    color: #ff5555;
+                }
+
+
+                &.success {
+                    background: rgba(80, 250, 123, 0.1);
+                    color: #50fa7b;
+                }
+
+                &.time {
+                    background: rgba(139, 233, 253, 0.1);
+                    color: #8be9fd;
+                }
+
+                &.modify {
+                    cursor: pointer;
+
+                    &:hover {
+                        background: rgba(139, 233, 253, 0.2);
+                    }
+                }
+            }
+        }
+
+        .actions {
+            display: flex;
+            gap: 8px;
+
+            .typing-button {
+                font-weight: bold;
+                text-transform: none;
+                color: #1e1e1e;
+                font-size: 12px;
+                padding: 2px 4px;
+            }
+
+            .continue {
+                background: #50fa7b;
+
+                &:hover {
+                    background: #40e06b;
+                }
+            }
+
+            .stop {
+                background: #ff5555;
+
+                &:hover {
+                    background: #e04040;
+                }
+            }
+
+            .copy-icon {
+                color: #666;
+                cursor: pointer;
+                padding: 4px;
+                border-radius: 4px;
+
+                transition: all 0.2s;
+
+                &:hover {
+                    color: #fff;
+                    background: rgba(255, 255, 255, 0.1);
+                }
+
+                &.success {
+                    color: #50fa7b;
+                }
+            }
+        }
+
+    }
+
+    .output-content {
+        max-height: 85vh;
+        flex: 1;
+        padding: 16px;
+        font-size: 14px;
+        line-height: 1.5;
+        white-space: pre-wrap;
+        overflow-y: auto;
+        scroll-behavior: smooth;
+        background: #1a1a1a;
+
+        &::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: #252525;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #444;
+            border-radius: 4px;
+
+            &:hover {
+                background: #555;
+            }
+        }
+    }
+}
+
+.badge.pended {
+    background-color: #f0ad4e;
+    color: #fff;
+    border-radius: 4px;
+    padding: 0.2em 0.5em;
+    font-weight: bold;
+}
